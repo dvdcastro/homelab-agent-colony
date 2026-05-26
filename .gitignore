@@ -1,0 +1,11 @@
+# Never commit these
+*.env
+.env.*
+access.json
+bot.pid
+*.jsonl
+inbox/
+memory/
+*token*
+*secret*
+*api_key*

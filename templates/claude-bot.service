@@ -1,0 +1,19 @@
+[Unit]
+Description=Claude Code Telegram Bot (mybot)
+# Replace "mybot" with your bot's name throughout this file
+After=network.target
+
+[Service]
+Type=simple
+ExecStart=/home/homelab/bin/claude-mybot.sh
+Restart=always
+RestartSec=10
+StandardOutput=journal
+StandardError=journal
+
+# Uncomment to limit runaway memory after long sessions:
+# MemoryMax=2G
+# MemorySwapMax=256M
+
+[Install]
+WantedBy=default.target
